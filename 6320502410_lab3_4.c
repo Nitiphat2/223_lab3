@@ -7,13 +7,11 @@ int main()
     {
         for(i=2;i<=x;i++)
         {
-            printf("%d\n",x);
             if(i==x&&j==0)
             {
-                printf("%d",i);
                 p=i;
             }
-            else
+            else if(x%i==0)
             {
                 j++;
             }
