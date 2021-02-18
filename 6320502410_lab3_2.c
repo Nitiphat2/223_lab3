@@ -9,7 +9,7 @@ int main()
         for(i=0; i<n; i++)
         {
             scanf("%d%d",&x[i],&y[i]);
-            if((x[i]>0&&x[i]<=48)||(y[i]>=1&&y[i]<=50000))
+            if(!((x[i]>0&&x[i]<=48)||(y[i]>=1&&y[i]<=50000)))
             {
                 p=1;
                 break;
@@ -35,10 +35,10 @@ int main()
                 if(max < y[i])
                 {
                     max=y[i];
-                    j=i;
+                    j=x[i];
                 }
             }
-            printf("%d %d",j+1,max);
+            printf("%d %d",j,max);
         }
     }
 
