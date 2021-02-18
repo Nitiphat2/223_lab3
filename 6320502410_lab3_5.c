@@ -20,24 +20,20 @@ int main()
         j=0;
     }
     int count=0,k=num,o=1,e;
-    for(e=0;k>1;e++)
+    for(e=0;k>1,e<l;e++)
     {
         if(k%n[e]==0)
         {
             k=k/n[e];
             count++;
         }
-        if(e >= l)
-        {
-            break;
-        }
     }
     if(count==3)
     {
-        printf("%d is a Lucky number",num);
+        printf("%d is a Lucky Number.",num);
     }
     else
     {
-        printf("%d is not a Lucky number",num);
+        printf("%d is not a Lucky Number.",num);
     }
 }
