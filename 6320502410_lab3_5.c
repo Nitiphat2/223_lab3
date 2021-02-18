@@ -19,16 +19,21 @@ int main()
         }
         j=0;
     }
-    int count=1,k=num,o=1,e;
+    int count=0,k=num,o=1,e;
     for(e=0;k>1,e<l;e++)
     {
         if(k%n[e]==0)
         {
             k=k/n[e];
-            if(k != o)
-            {
-                count++;
-            }
+            count++;
         }
+    }
+    if(count==3)
+    {
+        printf("%d is a Lucky number",num);
+    }
+    else
+    {
+        printf("%d is not a Lucky number",num);
     }
 }
