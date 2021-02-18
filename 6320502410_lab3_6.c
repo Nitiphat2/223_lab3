@@ -2,8 +2,8 @@
 #include<math.h>
 int main()
 {
-    int num,i,j=0,a,p,r=0;
-    scanf("%d",&num);
+    unsigned long long int num,i,j=0,a,p,r=0;
+    scanf("%llu",&num);
     while(r!=1)
     {
         for(i=2; i<=num; i++)
@@ -38,7 +38,7 @@ int main()
             }
             if(m == num)
             {
-                printf("%d",m);
+                printf("%llu",m);
                 r=1;
             }
             else
