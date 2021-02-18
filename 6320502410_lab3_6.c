@@ -16,7 +16,10 @@ int main()
                 j++;
             }
         }
-        printf("\n\n.%d",p);
+        if(p==8)
+        {
+            p=0;
+        }
         if(p==num)
         {
             a=p;
@@ -24,15 +27,14 @@ int main()
             {
                 a=a/10;
             }
-            int t[i],l,m;
+            int t[i],l,m=0;
             a=p;
             i--;
-            for(l=0;l<=i;l++)
+            for(l=i;l>=0;l--)
             {
-                 m = (a%10)*pow(10,i);
+                 m = m +(a%10)*pow(10,l);
                  a = a/10;
             }
-            printf("%d",m);
             if(m == num)
             {
                 printf("%d",m);
@@ -41,13 +43,12 @@ int main()
             else
             {
                 num--;
-                j=0;
             }
         }
         else
         {
             num--;
-            j=0;
         }
+        j=0;
     }
 }
