@@ -1,26 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    long int x,i,j=0,p;
-    scanf("%ld",&x);
-    while(x!=p)
+    unsigned long long int x,i,j=0,p;
+    scanf("%llu",&x);
+    if(x>=0&&x<=2000000000)
     {
-        for(i=2;i<=x;i++)
+        while(x!=p)
         {
-            if(i==x&&j==0)
+            for(i=2; i<=x; i++)
             {
-                p=i;
+                if(i==x&&j==0)
+                {
+                    p=i;
+                }
+                else if(x%i==0)
+                {
+                    j++;
+                }
             }
-            else if(x%i==0)
+            j=0;
+            if(x!=p)
             {
-                j++;
+                x--;
             }
         }
-        j=0;
-        if(x!=p)
-        {
-            x--;
-        }
+        printf("%llu",p);
     }
-    printf("%ld",p);
 }
