@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    unsigned long long int x,i,j=0,p;
+    unsigned long long int x,i,j=0,p=1;
     scanf("%llu",&x);
     if(x>=0&&x<=2000000000)
     {
@@ -18,10 +18,13 @@ int main()
                     j++;
                 }
             }
-            j=0;
             if(x!=p)
             {
                 x--;
+            }
+            else
+            {
+                j=0;
             }
         }
         printf("%llu",p);
