@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int m[5],n[5]={0,0,0,0,0};
+    int m[5],n[5]={0};
     int i,j,k;
     int max = 0;
     for(i=0;i<5;i++)
