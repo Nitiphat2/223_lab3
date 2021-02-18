@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
     unsigned long long int num,i,j=0,a,p,r=0;
@@ -24,21 +23,37 @@ int main()
         if(p==num)
         {
             a=p;
-            for(i=0;a>0;i++)
+            for(i=0; a>0; i++)
             {
                 a=a/10;
             }
-            int t[i],l,m=0;
+            int t[i],l,m[i],h,b=0;
             a=p;
             i--;
-            for(l=i;l>=0;l--)
+            for(l=i,h=0; l>=0,h<=i; l--,h++)
             {
-                 m = m +(a%10)*pow(10,l);
-                 a = a/10;
+                m[l] = a%10;
+                t[h] = a%10;
+                a = a/10;
             }
-            if(m == num)
+            for(l=0;l<=i;l++)
             {
-                printf("%llu",m);
+                if(m[l]==t[l])
+                {
+                    b=1;
+                }
+                else
+                {
+                    b=0;
+                    break;
+                }
+            }
+            if(b==1)
+            {
+                for(h=0;h<=i; h++)
+                {
+                    printf("%d",m[h]);
+                }
                 r=1;
             }
             else
