@@ -3,31 +3,36 @@ int main()
 {
     int n,p,i,a,j;
     scanf("%d",&n);
-    int x[n],y[n];
-    for(i=0;i<n;i++)
+    if(n>=0&&n<=10000)
     {
-        scanf("%d%d",&x[i],&y[i]);
-    }
-    for(i=0;i<n;i++)
-    {
-        for(j=i+1;j<n;j++)
+        int x[n],y[n];
+        for(i=0; i<n; i++)
         {
-            if(x[i] == x[j])
+            scanf("%d%d",&x[i],&y[i]);
+            if(x[i]>=0&&x[i]<=48&&y[i]>)
+        }
+        for(i=0; i<n; i++)
+        {
+            for(j=i+1; j<n; j++)
             {
-                y[i]=y[i]+y[j];
-                y[j]=0;
-                x[j]=NULL;
+                if(x[i] == x[j])
+                {
+                    y[i]=y[i]+y[j];
+                    y[j]=0;
+                    x[j]=NULL;
+                }
             }
         }
-    }
-    int max=0;
-    for(i=0;i<n;i++)
-    {
-        if(max < y[i])
+        int max=0;
+        for(i=0; i<n; i++)
         {
-            max=y[i];
-            j=i;
+            if(max < y[i])
+            {
+                max=y[i];
+                j=i;
+            }
         }
+        printf("%d %d",j+1,max);
     }
-    printf("%d %d",j+1,max);
+
 }
