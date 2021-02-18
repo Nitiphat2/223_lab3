@@ -7,7 +7,7 @@ int main()
     {
         for(i=2; i<=a; i++)
         {
-            if(a==i&&a%i==0&&j==0)
+            if(a==i&&j==0)
             {
                 n[l]=a;
                 l++;
@@ -18,5 +18,17 @@ int main()
             }
         }
         j=0;
+    }
+    int count=1,k=num,o=1,e;
+    for(e=0;k>1,e<l;e++)
+    {
+        if(k%n[e]==0)
+        {
+            k=k/n[e];
+            if(k != o)
+            {
+                count++;
+            }
+        }
     }
 }
