@@ -2,7 +2,8 @@
 int main()
 {
     int m[5],n[5]={0};
-    int i,j,k;
+    int i,j;
+    int k;
     int max = 0;
     for(i=0;i<5;i++)
     {
@@ -17,5 +18,6 @@ int main()
             k=i;
         }
     }
-    printf("%d %d",k+1,max);
+    k=k+1;
+    printf("%d %d",k,max);
 }
