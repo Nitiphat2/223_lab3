@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int x,i,j=0,p;
-    scanf("%d",&x);
+    long int x,i,j=0,p;
+    scanf("%ld",&x);
     while(x!=p)
     {
         for(i=2;i<=x;i++)
@@ -22,5 +22,5 @@ int main()
             x--;
         }
     }
-    printf("%d",p);
+    printf("%ld",p);
 }
